@@ -1,0 +1,10 @@
+name: ArenaMovecraft
+main: io.github.eirikh1996.arenamovecraft.AMmain
+version: 1.0
+api-version: 1.13
+author: eirikh1996
+softdepend:
+  - BattleArena
+  - Movecraft
+commands:
+  movecraftarena:

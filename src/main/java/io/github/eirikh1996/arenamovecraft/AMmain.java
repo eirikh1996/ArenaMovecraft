@@ -23,6 +23,7 @@ public class AMmain extends JavaPlugin {
                 logger.info("Found a compatible version of BattleArena");
             }
         }
+
         //Disable if BattleArena is not found
         if (battleArenaPlugin == null){
             logger.severe("BattleArena is required for this plugin, but a compatible version of BattleArena was not found");
@@ -46,14 +47,14 @@ public class AMmain extends JavaPlugin {
             logger.severe("Movecraft is required for this plugin. While a compatible version of it was found, it was disabled");
             getServer().getPluginManager().disablePlugin(this);
         }
-
+        saveResource("MovecraftArenaConfig.yml", false);
         //register arena
         BattleArena.registerCompetition(this, "MovecraftArena", "movecraftarena", MovecraftArena.class);
     }
 
     @Override
     public void onDisable() {
-        super.onDisable();
+
     }
 
     @Override
